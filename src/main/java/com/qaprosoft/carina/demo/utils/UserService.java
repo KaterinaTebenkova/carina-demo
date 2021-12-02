@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.demo.test1;
+package com.qaprosoft.carina.demo.utils;
 
 import com.qaprosoft.carina.core.foundation.utils.R;
 

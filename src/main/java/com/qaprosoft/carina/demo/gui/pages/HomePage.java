@@ -20,6 +20,7 @@ import java.util.List;
 
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 import com.qaprosoft.carina.core.foundation.utils.R;
+import com.qaprosoft.carina.demo.gui.components.HeaderMenu;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -43,6 +44,9 @@ public class HomePage extends AbstractPage {
     @FindBy(className = "news-column-index")
     private ExtendedWebElement newsColumn;
 
+    @FindBy(id = "header")
+    private HeaderMenu header;
+
     public HomePage(WebDriver driver) {
         super(driver);
         setUiLoadedMarker(newsColumn);
@@ -51,6 +55,10 @@ public class HomePage extends AbstractPage {
 
     public FooterMenu getFooterMenu() {
         return footerMenu;
+    }
+
+    public HeaderMenu getHeader() {
+        return header;
     }
 
     public BrandModelsPage selectBrand(String brand) {

@@ -1,13 +1,16 @@
 package com.qaprosoft.carina.demo;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
+
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
+import com.qaprosoft.carina.demo.gui.components.LoginMenu;
 import com.qaprosoft.carina.demo.gui.pages.HomePage;
-import com.qaprosoft.carina.demo.test1.LoginMenu;
-import com.qaprosoft.carina.demo.test1.UserService;
+import com.qaprosoft.carina.demo.utils.UserService;
 import com.zebrunner.agent.core.annotation.TestLabel;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+
+
 
 public class WebTest implements IAbstractTest {
     @Test()
@@ -24,5 +27,4 @@ public class WebTest implements IAbstractTest {
         loginMenu.login(userService);
         Assert.assertTrue(homePage.getHeader().isLogOutButtonPresent(),"Button isn't present");
     }
-
 }
