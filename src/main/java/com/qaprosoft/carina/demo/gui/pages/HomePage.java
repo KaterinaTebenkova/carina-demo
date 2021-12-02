@@ -77,4 +77,5 @@ public class HomePage extends AbstractPage {
     public WeValuePrivacyAd getWeValuePrivacyAd() {
     	return new WeValuePrivacyAd(driver);
     }
+
 }

@@ -1,5 +1,6 @@
 package com.qaprosoft.carina.demo;
 
+import com.qaprosoft.carina.demo.gui.pages.LoginPage;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
@@ -8,15 +9,13 @@ import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
 import com.qaprosoft.carina.demo.gui.components.LoginMenu;
 import com.qaprosoft.carina.demo.gui.pages.HomePage;
 import com.qaprosoft.carina.demo.utils.UserService;
-import com.zebrunner.agent.core.annotation.TestLabel;
 
 
 
 public class WebTest implements IAbstractTest {
-    @Test()
+    @Test
     @MethodOwner(owner = "qpsdemo")
-    @TestLabel(name = "feature", value = {"web", "regression"})
-    public void test(){
+    public void verifyLogin(){
         // Open GSM Arena home page and verify page is opened
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -26,5 +25,20 @@ public class WebTest implements IAbstractTest {
         Assert.assertTrue(loginMenu.isLoginMenuPresent(),"Login form isn't present");
         loginMenu.login(userService);
         Assert.assertTrue(homePage.getHeader().isLogOutButtonPresent(),"Button isn't present");
+    }
+
+    @Test
+    public void wrongLogin(){
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        loginPage.enterEmail(login);
+        loginPage.enterPass(password);
+        loginPage.clickLoginButton();
+
+
+        loginPage.verifyLoginUserNameError("User isn't logged");
+
+
+
     }
 }
