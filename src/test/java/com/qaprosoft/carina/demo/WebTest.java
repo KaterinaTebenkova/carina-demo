@@ -11,10 +11,9 @@ import com.qaprosoft.carina.demo.gui.pages.HomePage;
 import com.qaprosoft.carina.demo.utils.UserService;
 
 
-
 public class WebTest implements IAbstractTest {
     @Test
-    @MethodOwner(owner = "qpsdemo")
+    @MethodOwner(owner = "etebenkova")
     public void verifyLogin(){
         // Open GSM Arena home page and verify page is opened
         HomePage homePage = new HomePage(getDriver());
@@ -28,17 +27,16 @@ public class WebTest implements IAbstractTest {
     }
 
     @Test
+    @MethodOwner(owner = "etebenkova")
     public void wrongLogin(){
-        LoginPage loginPage = new LoginPage(getDriver());
-
-        loginPage.enterEmail(login);
-        loginPage.enterPass(password);
-        loginPage.clickLoginButton();
-
-
-        loginPage.verifyLoginUserNameError("User isn't logged");
-
-
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        UserService userService = new UserService();
+        Assert.assertTrue(homePage.isPageOpened(),"Home page isn't opened");
+        LoginMenu loginMenu = homePage.getHeader().openLoginMenu();
+        Assert.assertTrue(loginMenu.isLoginMenuPresent(),"Login form isn't present");
+        loginMenu.wrongLogin(userService);
+        Assert.assertTrue(loginMenu.isLoginLabelPresent(), "isn't present");
 
     }
 }

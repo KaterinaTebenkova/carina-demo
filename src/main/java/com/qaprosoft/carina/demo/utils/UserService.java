@@ -10,4 +10,11 @@ public class UserService {
         user.setPassword(R.TESTDATA.get("password"));
         return user;
     }
+
+    public User wrongLogin(){
+        User user = new User();
+        user.setWrongEmail(R.TESTDATA.get("wrong_email"));
+        user.setPassword(R.TESTDATA.get("password"));
+        return user;
+    }
 }

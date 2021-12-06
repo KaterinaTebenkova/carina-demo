@@ -9,7 +9,7 @@ import com.qaprosoft.carina.core.gui.AbstractUIObject;
 
 
 public class HeaderMenu extends AbstractUIObject {
-    @FindBy(xpath = "//i[contains(@class, 'head-icon icon-user')]")
+    @FindBy(xpath = "//i[contains(@class, 'head-icon icon-signout')]")
     private ExtendedWebElement logOutButton;
 
     @FindBy(id = "login-active")
