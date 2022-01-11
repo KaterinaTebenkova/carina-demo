@@ -1,0 +1,22 @@
+[
+  {
+    "login": "KaterinaTebenkova",
+    "id": "skip",
+    "node_id": "skip",
+    "avatar_url": "https://avatars.githubusercontent.com/u/93915421?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/KaterinaTebenkova",
+    "html_url": "https://github.com/KaterinaTebenkova",
+    "followers_url": "https://api.github.com/users/KaterinaTebenkova/followers",
+    "following_url": "https://api.github.com/users/KaterinaTebenkova/following{/other_user}",
+    "gists_url": "https://api.github.com/users/KaterinaTebenkova/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/KaterinaTebenkova/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/KaterinaTebenkova/subscriptions",
+    "organizations_url": "https://api.github.com/users/KaterinaTebenkova/orgs",
+    "repos_url": "https://api.github.com/users/KaterinaTebenkova/repos",
+    "events_url": "https://api.github.com/users/KaterinaTebenkova/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/KaterinaTebenkova/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+]

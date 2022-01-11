@@ -1,6 +1,5 @@
 package com.qaprosoft.carina.demo;
 
-import com.qaprosoft.carina.demo.gui.pages.LoginPage;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
